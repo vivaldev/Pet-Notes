@@ -11,11 +11,13 @@ const PetForm: React.FC<PetFormProps> = ({ dispatch }) => {
 
   return (
     <div className="petForm">
-      <h3 className="form-title">Add new Pet</h3>
+      <h3 className="form-title">
+        Add new <span>Pet </span>
+      </h3>
       <form>
         <div className="form-group">
           <label className="name-label" htmlFor="name">
-            Name
+            Name:
           </label>
           <input
             className="name-input"

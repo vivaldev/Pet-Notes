@@ -1,22 +1,70 @@
 .petForm {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   border: 2px solid rgb(79, 81, 85);
   border-radius: 5px;
 
   margin-top: 2rem;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .form-title {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1rem;
+
+  color: azure;
+}
+
+.form-title > span {
+  color: rgb(9, 197, 197);
+  font-size: 1.8rem;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+}
+
+.name-label,
+.age-label,
+.type-label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+
+  color: azure;
+}
+
+.name-input {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  padding: 0.3rem;
+
+  border: 1px solid rgb(59, 69, 89);
+  border-radius: 5px;
+
+  color: rgb(19, 217, 201);
+}
+
+.age-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: rgb(28, 182, 229);
+}
+
+.type-select {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  padding: 0.3rem;
+
+  border: 1px solid rgb(59, 69, 89);
+  border-radius: 5px;
+
+  color: rgb(40, 210, 51);
 }

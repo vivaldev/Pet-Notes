@@ -9,8 +9,8 @@ const RangeInput: React.FC = () => {
 
   return (
     <>
-      <label className="age" htmlFor="age">
-        Age: {value}
+      <label className="age-label" htmlFor="age">
+        Age: <span className="age-value">{value}</span>
       </label>
       <input
         className="age-input"
