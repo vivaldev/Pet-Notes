@@ -33,7 +33,7 @@ const PetForm: React.FC<PetFormProps> = ({ dispatch }) => {
 
         <div className="form-group">
           <label className="type-label" htmlFor="type">
-            Type
+            Type:
           </label>
           <select className="type-select" name="type" id="type">
             <option value="dog">Dog</option>
@@ -43,6 +43,9 @@ const PetForm: React.FC<PetFormProps> = ({ dispatch }) => {
             <option value="chicken">Chicken</option>
             <option value="rabbit">Rabbit</option>
           </select>
+        </div>
+        <div className="submit-wrapper">
+          <input className="submit-btn" type="submit" value="Add Pet" />
         </div>
 
         {/* {selectedType === "dog" && <DogForm />}
