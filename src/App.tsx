@@ -1,8 +1,8 @@
 import React, { useReducer } from "react";
 import "./App.css";
 
-import Header from "./components/Header";
-import PetForm from "./components/PetForm";
+import Header from "./components/Header/Header";
+import PetForm from "./components/PetForm/PetForm";
 import { petData } from "./data/petData";
 
 interface Pet {

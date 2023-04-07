@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import "../styles/PetForm.css";
+import "./PetForm.css";
 import RangeInput from "./RangeInput";
+import DogForm from "./AnimalForms/DogForm";
 
 interface PetFormProps {
   dispatch: React.Dispatch<any>;
@@ -48,12 +49,12 @@ const PetForm: React.FC<PetFormProps> = ({ dispatch }) => {
           <input className="submit-btn" type="submit" value="Add Pet" />
         </div>
 
-        {/* {selectedType === "dog" && <DogForm />}
-              {selectedType === "cat" && <CatForm />}
+        {selectedType === "dog" && <DogForm />}
+        {/* {selectedType === "cat" && <CatForm />}
               {selectedType === "horse" && <HorseForm />}
               {selectedType === "sheep" && <SheepForm />}
               {selectedType === "chicken" && <ChickenForm />}
-              {selectedType === "rabbit" && <RabbitForm />} */}
+  {selectedType === "rabbit" && <RabbitForm />} */}
       </form>
     </div>
   );
