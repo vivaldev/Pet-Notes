@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer, state } from "react";
 import "./App.css";
 
 import Header from "./components/Header/Header";
@@ -26,6 +26,7 @@ const petReducer = (state: Pet[], action: any) => {
 
 const App: React.FC = () => {
   const [petDataState, dispatch] = useReducer(petReducer, petData);
+
   return (
     <div className="App">
       <Header />
