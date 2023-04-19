@@ -1,23 +1,18 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import "./PetForm.css";
 import RangeInput from "./RangeInput";
 import DogForm from "./AnimalForms/DogForm";
 
 interface PetFormProps {
   dispatch: React.Dispatch<any>;
-  createRef: React.RefObject<HTMLInputElement | null>;
 }
 
-const PetForm: React.FC<PetFormProps> = ({ dispatch, createRef = null }) => {
+const PetForm: React.FC<PetFormProps> = ({ dispatch }) => {
   const [selectedType, setSelectedType] = useState<string>("");
-  const inputRef = createRef || React.createRef();
+  const [icon, setIcon] = useState<string>("");
 
   const handleTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedType(event.target.value);
-  };
-
-  const handleButtonClick = () => {
-    inputRef.current.focus();
   };
 
   return (
@@ -26,18 +21,16 @@ const PetForm: React.FC<PetFormProps> = ({ dispatch, createRef = null }) => {
         Add new <span>Pet </span>
       </h3>
       <form>
+        {selectedType && (
+          <div className="form-group image">
+            <img width="35%" src={`../../../images/${selectedType}.png`} />
+          </div>
+        )}
         <div className="form-group">
           <label className="name-label" htmlFor="name">
             Name:
           </label>
-          <input
-            className="input"
-            type="text"
-            name="name"
-            id="name"
-            required
-            ref={inputRef}
-          />
+          <input className="input" type="text" name="name" id="name" required />
         </div>
         <div className="form-group">
           <RangeInput />

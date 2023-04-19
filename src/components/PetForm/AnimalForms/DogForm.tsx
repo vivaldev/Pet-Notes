@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./../PetForm.css";
 
 interface DogFormProps {
@@ -6,8 +6,17 @@ interface DogFormProps {
 }
 
 const DogForm: React.FC<DogFormProps> = ({ dispatch }) => {
+  const [image, setImage] = useState<string>("");
+
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    // Handle image change logic here
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        setImage(reader.result as string);
+      };
+    }
   };
 
   return (
@@ -30,6 +39,12 @@ const DogForm: React.FC<DogFormProps> = ({ dispatch }) => {
         <label className="file-input-trigger" htmlFor="image">
           Image:
         </label>
+
+        {image && (
+          <div className="selected-image">
+            <img width="50%" src={image} alt="Selected image" />
+          </div>
+        )}
       </div>
     </>
   );

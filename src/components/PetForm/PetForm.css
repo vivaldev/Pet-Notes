@@ -8,6 +8,8 @@
 
   margin-top: 2rem;
   padding: 1.5rem;
+
+  min-width: 27.5em;
 }
 
 .form-title {
@@ -27,6 +29,12 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+
+  /* border: 2px solid white; */
+}
+
+.image {
+  align-items: center;
 }
 
 .name-label,
